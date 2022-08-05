@@ -1,0 +1,4 @@
+Para la base de datos utilize un host gratuito de la base de datos en clevercloud.
+Para usarla se crea un add-on de mongobd y se instala la base de datos en nuestra computadora de desarrollo
+por el cmd se accede a la aplicacion de base de datos y se conecta con el mongo CLI de clevercloud y la contraseña que genero
+>https://www.youtube.com/watch?v=GFREBc7_N8g&ab_channel=GilbertoCordova

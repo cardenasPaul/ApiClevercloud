@@ -1,0 +1,13 @@
+Pasos para el desarrollo
+1-Cree las carpetas models, routes y los archivos BDConector e index.js
+2-usando ctrl+shifth+p genere un terminal integrado
+3-use npm init --yes para el archivo 
+4-instale node con npm install y express con npm install express 
+5- puse en marcha el listener de express como servidor en el puerto 3000 o dado por la plataforma con  process.env.PORT
+6-instale nodemon para ejecutar en bucle el server tras actualizar codigo con npm install nodemon -D
+7-instalo morgan para crear los middleware usando npm install morgan y los incluyo en el index.js
+Pasos para desarrollo:
+1-abrir la interfaz con ctrl+shifth+p
+2-npm run dev_start
+3-para test la pagina se ejecuta en localhost:3000/
+Para cerrar nodemon utilizo ctrl+c
