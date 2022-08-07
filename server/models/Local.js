@@ -9,7 +9,11 @@ lo que se podria interpretar como caracteristicas de una entidad que por medio d
 const schemaUser = new Schema({
     Direccion:{type: String, required:true},
     Telefono:{type: String, required:false},
-    Rubro:{type: String, required:true}
+    Rubro:{type: String, required:true},
+    IdNegocio:{type: Number, required:true},
+    Nombre:{type: String, required:true},
+    Duenio:{type: String, required:true},
+    Localidad:{type: String, required:true}
 })
 
 module.exports = mongoose.model('Local', schemaUser);

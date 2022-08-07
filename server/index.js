@@ -13,6 +13,9 @@ app.use('/api/users/', require('./routes/User.routes'));//importo el router con 
 app.use('/api/Local/', require('./routes/Local.routes'));//importo el router con las rutas
 //rutas estaticas a archivos
 app.use(express.static(path.join(__dirname, 'client')));//uso para la ruta raiz del sevidor el html del cliente
+app.use('/nuevo/', function (req, res, next) {
+    res.sendFile('nuevoLocal.html', { root: wwwPath });
+});//uso para la ruta raiz del sevidor el html del cliente
 //start server
 app.listen(app.get('port'), () => {
     console.log("Servidor en linea dentro del puerto " + app.get('port'))

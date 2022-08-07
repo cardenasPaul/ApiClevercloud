@@ -17,20 +17,35 @@ router.post('/', async (req,res) =>{
     const{
         Direccion,
         Telefono,
-        Rubro
+        Rubro,
+        IdNegocio,
+        Nombre,
+        Duenio,
+        Localidad
     } = req.body;
     const Local = new localModel({
         Direccion,
         Telefono,
-        Rubro
+        Rubro,
+        IdNegocio,
+        Nombre,
+        Duenio,
+        Localidad
     });
     await Local.save();
     res.json({status:"guardado"});
 })
 //busqueda por id
 router.get('/:id', async (req,res) =>{
-    const Local = await localModel.findById(req.params.id);
+    var _id = req.params.id
+    const Local = await localModel.findOne({ IdNegocio,_id});
     res.json(Local);
+})
+//borrado de datos
+router.delete('/borrar/:id', async(req, res) =>{
+    var _id = req.params.id
+    var respuesta = await  localModel.remove({ IdNegocio,_id});
+    res.json({status:"borrado"});
 })
 
 module.exports = router;
